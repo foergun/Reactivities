@@ -10,7 +10,6 @@ axios.interceptors.response.use(undefined, (error: any) => {
     toast.error("Network error - make sure API is running!");
   }
 
-  console.log(error);
   const { status, data, config } = error.response;
 
   if (status === 404) {
@@ -26,6 +25,7 @@ axios.interceptors.response.use(undefined, (error: any) => {
   if (status === 500) {
     toast.error("Server Error - check the terminal for more info!");
   }
+  throw error;
 });
 
 const responseBody = (response: AxiosResponse) => response.data;

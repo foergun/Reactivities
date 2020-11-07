@@ -11,7 +11,7 @@ using FluentValidation.AspNetCore;
 using Application.Activities;
 using API.Middleware;
 
-namespace API
+namespace API 
 {
     public class Startup
     {

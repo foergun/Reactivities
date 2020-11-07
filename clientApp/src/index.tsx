@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import { Router } from "react-router-dom";
 import {createBrowserHistory} from "history";
 import 'react-toastify/dist/ReactToastify.min.css';
+import 'react-widgets/dist/css/react-widgets.css';
 import "./app/layout/styles.css";
 import App from "./app/layout/App";
 import * as serviceWorker from "./serviceWorker";
 import ScrollToTop from "./app/layout/ScrollToTop";
+import dataFnsLocalizer from 'react-widgets-date-fns';
+
+dataFnsLocalizer();
 
 export const history = createBrowserHistory();
 
